@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best restaurant</title>
+  <link rel="stylesheet" href="food.css">
+  <link rel="stylesheet" href="cs/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  .menu-btn {
+   font-size: 25px;
+   font-weight: bold;
+   display: inline-block;
+   text-align: center;
+   background-color: #040008;
+   color: white;
+   padding: 20px;
+   font-family: Cooper ;
+   border: none;
+   width: 100%;
+}
+.dropdown-menu {
+  background-color: black;
+   position: relative;
+   display: inline-block;
+}
+.menu-content {
+   display: none;
+   position: absolute;
+   width: 100%;
+   background-color: black;
+   min-width: 160px;
+   z-index: 1;
+}
+nav{
+   background-color:chocolate;
+   width: 100%;
+}
+.links,.links-hidden{
+   display: inline-block;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 20px;
+   font-family:Cooper  ;
+}
+.links-hidden:hover,.links:hover {
+   background-color: red;
+   border-radius: 5px;
+   width: 100%;
+   
+}
+.dropdown-menu:hover .menu-content {
+   display: block;
+}
+.dropdown-menu:hover .menu-btn {
+   background-color:red;
+}
+  
+
+
+#menu{
+	
+	min-height: 100vh;
+	width: 100vw;
+}
+#menu .heading h1{
+	font-size:60px;
+	font-family: Gabriola;
+	font-weight: bolder;
+	color: red;
+}
+#menu .heading h3{
+	text-align: center;
+	font-family:French Script MT ;
+	font-size: 40px;
+	font-weight: bold;
+	color: orangered;
+}
+#menu .heading h4{
+	text-align: center;
+	font-family:Chiller ;
+	color: rgb(44, 4, 4);
+	font-size: 40px;
+	font-weight: bold;
+}
+.small-container{
+ text-align: center;
+ padding: 20px;
+}
+.small-container h2{
+  font-family: Lucida Calligraphy;
+  color: red;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+.small-container .row .col-4{
+      padding: 20px 20px;
+}
+.small-container .row .col-4 h4{
+  font-family:Forte ;
+  color: brown;
+}
+.small-container .row .col-4  p{
+   font-family:Freestyle Script ;
+   color: firebrick;
+   font-size: 32px;
+
+}
+.small-container .row .col-4 img{
+  height: 140px;
+	width: 67%;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0 0 .5rem #333;
+}
+.products .heading{
+  text-align: center;
+  padding-top: 1rem;
+  color: rgb(116, 52, 7);
+  font-weight: bold;
+
+}
+.products .box-container .box .price h3{
+  font-size: 25px;
+}
+.products .box-container .box  h3{
+  font-size: 25px;
+  color: var(--pink);
+  
+}
+.products .box-container .box img{
+  height:180px;
+  
+}
+.products .box-container .box .price .rating{
+   text-align: center;
+   color: orangered;
+}
+.products .box-container .box .price span{
+    font-size:20px;
+    color: rgba(92, 89, 89, 0.6);
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+.products .box-container .box {
+  
+  
+  border: 1rem solid rgba(0,0,0,.1);
+}
+
+
+
+
+</style>
+<body style="background-color: bisque;">
+    <!--navbar start-->
+  <nav class="navbar">
+    <img class="logo" src="logo6.jpg">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+    </ul>
+  </nav>
+  <section class="products" id="products">
+    <h1 class="heading">Conteinantal &nbsp;<span>menu</span></h1>
+    <div class="book-mein" style="padding: 20px;">
+      <div class="book">
+        <div class="imgbox">
+        <img src="no.jpg">
+        </div>
+        <div class="content">
+        <h3>Spicy Noodels</h3>
+        <p>Hot and spicy noodles with flavoured spices and sauce</p>
+       
+        <div class="price">
+           <h2><i class="fa fa-inr" aria-hidden="true"></i>40&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>50</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+           <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-half-o"></i>
+           </div>
+        </div>
+        </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c1.jpg">
+        </div>
+        <div class="content">
+        <h3>Grilled fish</h3>
+        <p>Tasty grilled fish with crispiness and yummy</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>35&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>45</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+           <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-o"></i>
+           </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c2.jpg">
+        </div>
+        <div class="content">
+        <h3>spicy crap</h3>
+        <p>Crap fry with spices and fresh crap</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>43&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>50</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+          </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c3.jpg">
+        </div>
+        <div class="content">
+        <h3>mushroom Noodels</h3>
+        <p>Korean style mushroom noodels with mushroom</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>25&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>35</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+           <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-o"></i>
+           <i class="fa fa-star-o"></i>
+           </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c4.jpg">
+        </div>
+        
+        <div class="content">
+        <h3>Gobi manchurian
+        </h3>
+        <p>yummy and spicy gobi manchurian</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>40&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>50</span></h3>
+           <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-half-o"></i>
+           <i class="fa fa-star-o"></i>
+           </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c5.jpg">
+        </div>
+        <div class="content">
+        <h3>Pasta</h3>
+        <p>crispy and tasty pasta with  white mayonnaise</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>35&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>45</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c6.jpg">
+        </div>
+        <div class="content">
+        <h3>Tacos</h3>
+        <p>The tacos with garlic and  fresh vegtables</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>50&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>65</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+          </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        
+        <img src="c7.jpg">
+        </div>
+        <div class="content">
+        <h3>Garlic kebab</h3>
+        <p>Kebab with garlic flavour and tasty kebab</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>25&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>40</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          </div>
+       </div>
+       </div>
+      </div>
+      <div class="book">
+        <div class="imgbox">
+        <img src="c8.jpg">
+        </div>
+        <div class="content">
+        <h3>Tomato soup</h3>
+        <p>Tomato soup with boiled tomatoes and spices</p>
+        <div class="price">
+          <h2><i class="fa fa-inr" aria-hidden="true"></i>20&nbsp;&nbsp;<span><i class="fa fa-inr" aria-hidden="true"></i>25</span>&nbsp;&nbsp;<button type="submit">Order</button></h3>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+          </div>
+       </div>
+       </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!--footer-->
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+        
+      <h3>Place for<span></span>Foodie</h3>
+  
+      <p class="footer-links">
+        <a href="index.html">Home</a>
+        |
+        <a href="about.html">About</a>
+        |
+        <a href="menu.html">menu</a>
+        |
+        <a href="contact.html">Contact</a>
+      </p>
+  
+      <p class="footer-company-name">© 2022 puhms</p>
+    </div>
+  
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>309 - Rupa Solitaire,
+           Bldg. No. A - 1, Sector - 1</span>
+          Mahape, Navi Madurai - 400710</p>
+      </div>
+  
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 23418765</p>
+      </div>
+      
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>follow us</span>
+       
+      </p>
+      <h6 style="color: white;"> <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;instagram</h6>
+      <h6 style="color: white;"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;facebook</h6>
+    </div>
+  </footer>
+  
+   </body>
+   </html>
